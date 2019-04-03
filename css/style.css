@@ -1,0 +1,79 @@
+body {
+  background-color: black;
+  height: 300vh;
+}
+
+#myP {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.donna {
+  background-image: url(../img/twinpeaks-girls.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  -webkit-animation-name: cropDonna;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: cropDonna;
+  animation-duration: 2s;
+  -webkit-clip-path: circle(10% at 41% 25%);
+  clip-path: circle(10% at 41% 25%);
+}
+
+.audrey {
+  -webkit-animation-name: cropAudrey;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: cropAudrey;
+  animation-duration: 2s;
+  -webkit-clip-path: circle(10% at 50% 20%);
+  clip-path: circle(10% at 50% 20%);
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes cropDonna {
+  0%   {-webkit-clip-path: circle(0% at 41% 25%);}
+  100% {-webkit-clip-path: circle(10% at 41% 25%);}
+}
+
+/* Standard syntax */
+@keyframes cropDonna {
+  0%   {clip-path: circle(0% at 41% 25%);}
+  100% {clip-path: circle(10% at 41% 25%);}
+}
+
+@-webkit-keyframes cropAudrey {
+  0%   {-webkit-clip-path: circle(0% at 50% 20%);}
+  100% {-webkit-clip-path: circle(10% at 50% 20%);}
+}
+
+/* Standard syntax */
+@keyframes cropAudrey {
+  0%   {clip-path: circle(0% at 50% 20%);}
+  100% {clip-path: circle(10% at 50% 20%);}
+}
+
+.showText {
+  font-size: 15px;
+  color: white;
+  width: 20vw;
+  z-index: 100;
+  position: fixed;
+}
+
+#textDonna {
+  display: none;
+  margin-left: 20%;
+  margin-top: 20%;
+  animation-name: slowShow;
+  animation-duration: 5s;
+}
+
+@keyframes slowShow {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
